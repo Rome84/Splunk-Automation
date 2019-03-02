@@ -17,10 +17,10 @@ tags {
   }
 
 }
-output "jenkins_ip" {
+output "splunk_ip" {
     value = "${aws_instance.splunk.public_ip}"
 }
-output "jenkins_END_URL" {
+output "splunk_END_URL" {
     value = "http://${aws_instance.splunk.public_ip}:8000"
 }
 
