@@ -1,5 +1,5 @@
 ---
-- name: Coping splunk software zip
+- name: Copying splunk software zip
   copy: 
     src: splunk-7.2.4-8a94541dcfac-Linux-x86_64.tgz
     dest: /opt
