@@ -4,7 +4,7 @@ Splunk:
 ---
 Steps to perfrom:
 1) Clone the repo
-2) cd splunk-terraform
+2) cd Splunk-Automation
 3) ssh-keygen -f mykey
 	<------ HIT ENTER
 4) cd splunk-playbook/roles/splunk/files/
