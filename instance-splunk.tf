@@ -5,7 +5,7 @@ resource "aws_instance" "splunk" {
   key_name = "${aws_key_pair.mykey.key_name}"
  
    provisioner "local-exec" {
-     command = "sleep 120 && echo \"[splunk-master]\n${aws_instance.splunk.public_ip} ansible_connection=ssh ansible_ssh_user=centos ansible_ssh_private_key_file=mykey ansible_ssh_common_args='-o StrictHostKeyChecking=no'\" > splunk-inventory &&  ansible-playbook -i splunk-inventory splunk-playbook/splunk-server.yml"
+     command = "sleep 180 && echo \"[splunk-master]\n${aws_instance.splunk.public_ip} ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=mykey ansible_ssh_common_args='-o StrictHostKeyChecking=no'\" > splunk-inventory &&  ansible-playbook -i splunk-inventory splunk-playbook/splunk-server.yml"
   }
 
   connection {
